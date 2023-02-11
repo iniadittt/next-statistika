@@ -31,14 +31,14 @@ const Diagram = () => {
   return (
     <div className='lg:w-full lg:h-auto font-poppins relative bg-[#F2F5FA]'>
         <Navigasi/>
-        <div className='lg:w-[1080px] lg:h-auto lg:pt-36 lg:mb-10 lg:mx-auto lg:flex lg:flex-col lg:gap-10 lg:justify-center h-[41rem] flex flex-col gap-4 p-5 justify-center'>
+        <div className='lg:w-[1080px] lg:h-auto lg:pt-36 pt-8 mb-10 lg:mx-auto lg:gap-10 lg:justify-center h-auto flex flex-col gap-4 p-5 justify-center'>
             <h1 className='font-bold lg:text-6xl text-4xl text-center text-[#0A2647]'>Diagram</h1>
-            <div className='lg:flex lg:flex-row lg:gap-6 lg:justify-between'>
+            <div className='flex lg:flex-row lg:gap-6 lg:justify-between flex-col gap-10'>
                 {
                     dataDiagram.map((element, index) => {
-                        return  <div key={index} className='lg:w-1/3 bg-white shadow-lg rounded-lg'>
-                                    <Image src={`/image/${element.image}`} alt={element.text} width={300} height={400} className='rounded-lg h-48'/>
-                                    <div className='px-4 py-3 lg:flex lg:flex-col lg:gap-5'>
+                        return  <div key={index} className='lg:w-1/3 w-full bg-white shadow-lg rounded-lg'>
+                                    <Image src={`/image/${element.image}`} alt={element.text} width={400} height={400} className='rounded-lg h-48'/>
+                                    <div className='px-4 py-3 flex flex-col gap-5'>
                                       <p className='text-xl font-semibold'>{element.text}</p>
                                       <button name={element.name} onClick={e => handlerClick(e)} className='bg-[#0A2647] w-full py-2 text-sm font-semibold text-white rounded-md'>Lihat Penjelasan</button>
                                       {

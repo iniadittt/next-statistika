@@ -26,13 +26,14 @@ const Index = () => {
             <Image src='/image/3.png' alt='3' width={500} height={500} className='lg:w-1/2 lg:h-60 lg:my-auto lg:rounded-2xl lg:shadow-xl rounded-2xl shadow-xl'/>
           </div>
           <p className='lg:text-xl lg:py-12 lg:bg-transparent lg:shadow-none lg:leading-relaxed p-5 text-lg bg-white my-8 shadow-md'><b>Statistika</b> adalah ilmu yang mempelajari bagaimana merencanakan, mengumpulkan, menganalisis, menginterpretasi, dan mempresentasikan data. Statistika pada umumnya bekerja dengan memakai data numerik yang di mana adalah hasil cacahan maupun hasil pengkuran yang dilakukan dengan menggunakan data kategorik yang diklasifikasikan menurut sebuah kriteria tertentu.</p>
-          <div className='mb-24 lg:flex lg:flex-row lg:justify-between gap-5'>
-            
+          
+          
+          <div className='mb-10 lg:mb-24 px-5 flex lg:flex-row flex-col lg:justify-between gap-5'>
               {
                 dataImage.map((element, index) => {
                   return  <div key={index} className='bg-white rounded-lg shadow-lg'>
                             <Image src={`/image/${element.image}`} alt={element.image} width={1000} height={250} className='lg:h-48 rounded-lg'/>
-                            <p className='lg:px-4 lg:py-3'>{element.text}</p>
+                            <p className='px-4 py-3'>{element.text}</p>
                           </div>
                 })
               }
